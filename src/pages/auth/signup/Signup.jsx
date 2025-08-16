@@ -3,9 +3,9 @@ import React from 'react'
 const Signup = () => {
     return (
         <div>
-            <h1>Signup</h1>
+            SignUp
         </div>
     )
 }
 
-export default Signup;
+export default Signup; 
