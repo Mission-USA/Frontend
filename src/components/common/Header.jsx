@@ -1,9 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import getMenuForRole from "../../utils/menuConfig";
+import { useState, useEffect } from "react";
 
 const Signup = () => {
   const navMenuList = getMenuForRole();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const collapseMenu = document.getElementById('collapseMenu');
+      const toggleOpen = document.getElementById('toggleOpen');
+      const toggleClose = document.getElementById('toggleClose');
+      
+      if (collapseMenu && 
+          !collapseMenu.contains(event.target) && 
+          !toggleOpen?.contains(event.target) && 
+          !toggleClose?.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="flex shadow-md py-4 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between gap-5 w-full">
@@ -34,6 +62,7 @@ const Signup = () => {
           <button
             id="toggleClose"
             className="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border border-gray-200 cursor-pointer"
+            onClick={handleClick}
           >
             ✕
           </button>
@@ -76,7 +105,10 @@ const Signup = () => {
           </button>
 
           {/* Hamburger (mobile) */}
-          <button id="toggleOpen" className="lg:hidden cursor-pointer">
+          <button id="toggleOpen" 
+                  className="lg:hidden cursor-pointer"
+                  onClick={handleClick}
+                  >
             <svg
               className="w-7 h-7"
               fill="#000"

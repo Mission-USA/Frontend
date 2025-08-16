@@ -1,1 +1,1 @@
-export { default } from './manageJobs';
+export { default } from './manageJobs.jsx';

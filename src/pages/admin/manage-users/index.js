@@ -1,1 +1,1 @@
-export { default } from './manageUsers';
+export { default } from './manageUsers.jsx';
