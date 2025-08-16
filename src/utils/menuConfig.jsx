@@ -32,7 +32,7 @@ const allMenus = {
 // Function to return menu for current role
 const getMenuForRole=()=> {
   const role = Cookies.get("role");
-  return allMenus[role] || allMenus['company'];
+  return allMenus[role] || allMenus['common'];
 }
 
 export default getMenuForRole;
