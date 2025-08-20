@@ -1,18 +1,18 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Sidebar from '../../components/Sidebar'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import StudentNavbar from '../../components/navigation/navbar/StudentNavbar';
+import Footer from '../../components/common/Footer';
 
 const StudentLayout = () => {
     return (
-        <div>
-            <Header />
-            <Sidebar />
-            <Outlet />
+        <div className="min-h-screen flex flex-col">
+            <StudentNavbar />
+            <main className="flex-1 pt-[78px] sm:pt-[86px]">
+                <Outlet />
+            </main>
             <Footer />
         </div>
-    )
-}
+    );
+};
 
 export default StudentLayout;   
