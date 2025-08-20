@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import ScrollToTop from '../components/common/ScrollToTop'
 import CompanyDashboard from '../pages/company/dashboard'
 import CompanyProfile from '../pages/company/profile'
 import Jobs from '../pages/company/jobs'
@@ -17,9 +18,10 @@ import ExpiredApplications from '../pages/company/applications/expired'
 
 const CompanyRoutes = () => {
     return (
-        <Router>
+        <>
+            <ScrollToTop />
             <Routes>
-                <Route path="/dashboard" element={<CompanyDashboard />} />
+                <Route path="/" element={<CompanyDashboard />} />
                 <Route path="/profile" element={<CompanyProfile />} />
                 <Route path="/jobs" element={<Jobs />} />
                 <Route path="/jobs/open" element={<OpenJobs />} />
@@ -34,7 +36,7 @@ const CompanyRoutes = () => {
                 <Route path="/jobs/applications/:id/withdrawn" element={<WithdrawnApplications />} />
                 <Route path="/jobs/applications/:id/expired" element={<ExpiredApplications />} />
             </Routes>
-        </Router>
+        </>
     );
 };
 

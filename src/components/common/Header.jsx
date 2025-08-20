@@ -32,12 +32,12 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex shadow-md py-4 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide relative z-50">
+    <header className="fixed top-0 inset-x-0 flex shadow-md py-4 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide z-50">
       <div className="flex flex-wrap items-center justify-between gap-5 w-full">
-        <Link to="/" className="max-sm:hidden">
+                <Link to="/home" className="max-sm:hidden">
           <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className="w-36" />
         </Link>
-        <Link to="/" className="hidden max-sm:block">
+        <Link to="/home" className="hidden max-sm:block">
           <img src="https://readymadeui.com/readymadeui-short.svg" alt="logo" className="w-9" />
         </Link>
 
@@ -72,12 +72,12 @@ const Header = () => {
             </li>
             <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
               <Link 
-                to="/"
-                className={`hover:text-blue-700 block font-medium text-[15px] ${
-                  location.pathname === '/' ? 'text-blue-700' : 'text-slate-900'
-                }`}
-              >
-                Home
+                                 to="/home"
+                 className={`hover:text-blue-700 block font-medium text-[15px] ${
+                   location.pathname === '/home' ? 'text-blue-700' : 'text-slate-900'
+                 }`}
+               >
+                 Home
               </Link>
             </li>
             <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
@@ -88,6 +88,16 @@ const Header = () => {
                 }`}
               >
                 About
+              </Link>
+            </li>
+            <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
+              <Link 
+                to="/blog"
+                className={`hover:text-blue-700 block font-medium text-[15px] ${
+                  location.pathname === '/blog' ? 'text-blue-700' : 'text-slate-900'
+                }`}
+              >
+                Blog
               </Link>
             </li>
             <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#222] text-white pt-12 pb-6 px-4 tracking-wide mt-auto">
+    <footer className="bg-[#222] text-white pt-8 pb-4 px-4 tracking-wide mt-auto">
       <div className="text-center">
         <ul className="flex gap-x-8 gap-y-3 justify-center flex-wrap">
           <li><a href="javascript:void(0)" className="text-[15px] text-slate-300 hover:text-white">Terms of Service</a></li>
@@ -11,10 +11,10 @@ const Footer = () => {
           <li><a href="javascript:void(0)" className="text-[15px] text-slate-300 hover:text-white">Company</a></li>
         </ul>
 
-        <div className="mt-12">
+        <div className="mt-8">
           <h6 className="text-[15px] text-slate-300">Stay connected with us:</h6>
 
-          <ul className="flex flex-wrap justify-center gap-x-6 ga-y-3 gap-4 mt-6">
+          <ul className="flex flex-wrap justify-center gap-x-6 ga-y-3 gap-4 mt-4">
             <li>
               <a href="javascript:void(0)">
                 <svg xmlns="http://www.w3.org/2000/svg" className="fill-blue-600 w-8 h-8" viewBox="0 0 49.652 49.652">
@@ -64,7 +64,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="border-t border-gray-600 pt-6 mt-12">
+        <div className="border-t border-gray-600 pt-4 mt-8">
           <p className="text-[15px] text-slate-300">© ReadymadeUI. All rights reserved.</p>
         </div>
       </div>
