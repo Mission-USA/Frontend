@@ -19,8 +19,8 @@ const AppRoutes = () => {
             <ScrollToTop />
             <div className="flex-1 pt-[78px] sm:pt-[86px]">
                 <Routes>
-                    <Route path="/" element={<Login />} />
-                    <Route path="/home" element={<React.Suspense fallback={null}><Landing /></React.Suspense>} />
+                    <Route path="/" element={<React.Suspense fallback={null}><Landing /></React.Suspense>} />
+                    <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/reset-password" element={<ResetPassword />} />

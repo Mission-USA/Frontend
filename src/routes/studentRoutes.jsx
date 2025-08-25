@@ -7,6 +7,9 @@ import StudentProfile from '../pages/student/profile'
 import Companies from '../pages/student/companies'
 import Jobs from '../pages/student/jobs'
 import StudentApplications from '../pages/student/applications'
+import InternshipsPage from '../pages/student/internships'
+import InternshipDetailPage from '../pages/student/internship-detail'
+import ApplyPage from '../pages/student/apply'
 
 const StudentRoutes = () => {
     return (
@@ -19,7 +22,9 @@ const StudentRoutes = () => {
                     <Route path="companies" element={<Companies />} />
                     <Route path="jobs" element={<Jobs />} />
                     <Route path="applications" element={<StudentApplications />} />
-                    <Route path="internships" element={<Jobs />} />
+                    <Route path="internships" element={<InternshipsPage />} />
+                    <Route path="internship/:id" element={<InternshipDetailPage />} />
+                    <Route path="apply/:id" element={<ApplyPage />} />
                     <Route path="fulltime" element={<Jobs />} />
                 </Route>
             </Routes>

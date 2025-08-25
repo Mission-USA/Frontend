@@ -1,4 +1,8 @@
 import React from 'react';
+import RecommendedJobs from '../../../components/cards/RecommendedJobs';
+import ShortlistedJobs from '../../../components/cards/ShortlistedJobs';
+import InternshipJobs from '../../../components/cards/InternshipJobs';
+import FullTimeJobs from '../../../components/cards/FullTimeJobs';
 
 const Dashboard = () => {
   return (
@@ -70,7 +74,7 @@ const Dashboard = () => {
       </div>
 
       {/* Recent Activities */}
-      <div className="bg-white rounded-lg border border-slate-200 shadow-sm">
+      <div className="bg-white rounded-lg border border-slate-200 shadow-sm mb-8">
         <div className="p-6 border-b border-slate-200">
           <h2 className="text-xl font-semibold text-slate-900">Recent Activities</h2>
         </div>
@@ -107,6 +111,18 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
+      {/* Recommended Jobs Section */}
+      <RecommendedJobs />
+
+      {/* Shortlisted Jobs Section */}
+      <ShortlistedJobs />
+
+      {/* Internships Section */}
+      <InternshipJobs />
+
+      {/* Full-Time Jobs Section */}
+      <FullTimeJobs />
     </div>
   );
 };

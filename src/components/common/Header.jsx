@@ -34,10 +34,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 inset-x-0 flex shadow-md py-4 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide z-50">
       <div className="flex flex-wrap items-center justify-between gap-5 w-full">
-                <Link to="/home" className="max-sm:hidden">
+                <Link to="/" className="max-sm:hidden">
           <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className="w-36" />
         </Link>
-        <Link to="/home" className="hidden max-sm:block">
+        <Link to="/" className="hidden max-sm:block">
           <img src="https://readymadeui.com/readymadeui-short.svg" alt="logo" className="w-9" />
         </Link>
 
@@ -72,9 +72,9 @@ const Header = () => {
             </li>
             <li className="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 px-3">
               <Link 
-                                 to="/home"
+                                 to="/"
                  className={`hover:text-blue-700 block font-medium text-[15px] ${
-                   location.pathname === '/home' ? 'text-blue-700' : 'text-slate-900'
+                   location.pathname === '/' ? 'text-blue-700' : 'text-slate-900'
                  }`}
                >
                  Home
@@ -115,7 +115,7 @@ const Header = () => {
 
         <div className="flex max-lg:ml-auto space-x-4">
           <button 
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/login')}
             className="px-4 py-2 text-sm rounded-full font-medium cursor-pointer tracking-wide text-slate-900 border border-gray-400 bg-transparent hover:bg-gray-50 transition-all"
           >
             Login
