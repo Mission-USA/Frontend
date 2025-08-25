@@ -1,8 +1,55 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* optional: customize tokens (v4) */
+@theme {
+  --color-brand-500: oklch(0.68 0.17 262);
+  --font-sans: "Libertinus Serif", serif;
+}
+
+/* Libertinus Serif Font Classes */
+.libertinus-serif-regular {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libertinus-serif-semibold {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.libertinus-serif-bold {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libertinus-serif-regular-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.libertinus-serif-semibold-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.libertinus-serif-bold-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Set Libertinus Serif as default font for entire application */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
