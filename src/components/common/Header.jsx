@@ -111,12 +111,12 @@ const Header = () => {
         </div>
 
         <div className="flex max-lg:ml-auto space-x-4">
-          <button
-            onClick={() => navigate("/")}
-            className="px-4 py-2 text-sm rounded-full font-medium cursor-pointer tracking-wide text-slate-900 border border-gray-400 bg-transparent hover:bg-gray-50 transition-all"
-          >
-            Login
-          </button>
+                    <button
+            onClick={() => navigate("/login")}
+             className="px-4 py-2 text-sm rounded-full font-medium cursor-pointer tracking-wide text-slate-900 border border-gray-400 bg-transparent hover:bg-gray-50 transition-all"
+            >
+              Login
+            </button>
           <button
             onClick={() => navigate("/signup")}
             className="px-4 py-2 text-sm rounded-full font-medium cursor-pointer tracking-wide text-white border border-blue-600 bg-blue-600 hover:bg-blue-700 transition-all"
